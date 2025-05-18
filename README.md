@@ -330,6 +330,67 @@ routes/
 
 ````
 
+```php
+
+Available commands for the "make" namespace:
+  make:amqp-consumer        [gen:amqp-consumer] Create a new amqp consumer class
+  make:amqp-producer        [gen:amqp-producer] Create a new amqp producer class
+  make:aspect               [gen:aspect] Create a new aspect class
+  make:channel              Create a new channel class
+  make:class                [gen:class] Create a new class
+  make:command              Create a new Artisan command
+  make:component            Create a new view component class
+  make:constant             [gen:constant] Create a new constant class
+  make:controller           [gen:controller] Create a new controller class
+  make:event                Create a new event class
+  make:factory              Create a new model factory
+  make:job                  Create a new job class
+  make:kafka-consumer       [gen:kafka-consumer] Create a new kafka consumer class
+  make:listener             Create a new event listener class
+  make:mail                 Create a new email class
+  make:middleware           [gen:middleware] Create a new middleware class
+  make:migration            [gen:migration] Generate a new migration file
+  make:model                Create a new Eloquent model class
+  make:nats-consumer        [gen:nats-consumer] Create a new nats consumer class
+  make:notification         Create a new notification class
+  make:notifications-table  [notifications:table] Create a migration for the notifications table
+  make:nsq-consumer         [gen:nsq-consumer] Create a new nsq consumer class
+  make:observer             Create a new model observer class
+  make:policy               Create a new policy class
+  make:process              [gen:process] Create a new process class
+  make:provider             Create a new service provider class
+  make:queue-batches-table  [queue:batches-table] Create a migration for the batches database table
+  make:queue-failed-table   [queue:failed-table] Create a migration for the failed queue jobs database table
+  make:queue-table          [queue:table] Create a migration for the queue jobs database table
+  make:request              Create a new form request class
+  make:resource             [gen:resource] create a new resource
+  make:rule                 Create a new validation rule
+  make:seeder               Create a new seeder class
+  make:session-table        [session:table] Create a migration for the session database table
+  make:test                 Create a new test class
+
+```
+
+# Create base table like spatie
+
+```php
+php artisan make:model Role -m
+# → Migration: 2025_05_17_154027_create_roles_table
+
+php artisan make:model Permission -m
+# → Migration: 2025_05_17_154203_create_permissions_table
+
+php artisan make:model ModelHasRole -m
+# → Migration: 2025_05_17_154248_create_model_has_roles_table
+
+php artisan make:model ModelHasPermission -m
+# → Migration: 2025_05_17_154400_create_model_has_permissions_table
+
+php artisan make:model RoleHasPermission -m
+# → Migration: 2025_05_17_154437_create_role_has_permissions_table
+
+```
+
 
 > See [this issue](https://github.com/laravel/octane/issues/765) for more discussions.
 
